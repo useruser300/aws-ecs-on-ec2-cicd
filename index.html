@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AWS ECS on EC2 - CI/CD Project</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 50px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background-color: #22c55e;
+      color: #052e16;
+      font-weight: bold;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #e2e8f0;
+      margin-bottom: 20px;
+    }
+
+    .architecture-box {
+      margin-top: 35px;
+      padding: 25px;
+      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: left;
+    }
+
+    .architecture-box h2 {
+      margin-bottom: 18px;
+      font-size: 1.4rem;
+      color: #38bdf8;
+    }
+
+    .architecture-box ul {
+      list-style: none;
+    }
+
+    .architecture-box li {
+      margin-bottom: 12px;
+      color: #cbd5e1;
+      font-size: 1rem;
+    }
+
+    .architecture-box li::before {
+      content: "✔";
+      color: #22c55e;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 14px 30px;
+      border-radius: 999px;
+      background-color: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #7dd3fc;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 35px 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .architecture-box {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="badge">
+      ECS Deployment Successful
+    </div>
+
+    <h1>
+      AWS ECS on EC2 <br />
+      CI/CD Pipeline
+    </h1>
+
+    <p>
+      This project demonstrates a complete cloud-native deployment workflow using
+      Amazon ECS, EC2 Container Instances, Docker, Terraform, and GitHub Actions.
+    </p>
+
+    <p>
+      The infrastructure is automatically provisioned with Terraform, container
+      images are stored in Amazon ECR, and deployments are handled through a
+      fully automated CI/CD pipeline.
+    </p>
+
+    <div class="architecture-box">
+
+      <h2>Architecture Overview</h2>
+
+      <ul>
+        <li>GitHub Actions CI/CD Pipeline</li>
+        <li>Docker Image Build & Push to Amazon ECR</li>
+        <li>Amazon ECS Cluster running on EC2 Instances</li>
+        <li>Application Load Balancer for Traffic Distribution</li>
+        <li>Infrastructure Provisioning with Terraform</li>
+        <li>Containerized Nginx Application Deployment</li>
+      </ul>
+
+    </div>
+
+    <a href="#" class="btn">
+      View Architecture
+    </a>
+
+    <footer>
+      © 2026 AWS ECS on EC2 CI/CD Project — Built for Cloud & DevOps Practice
+    </footer>
+
+  </div>
+
+</body>
+</html>
