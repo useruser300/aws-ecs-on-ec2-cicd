@@ -17,6 +17,30 @@ The following diagram illustrates the overall architecture of this project, incl
 
 ---
 
+## Deployment Verification
+
+The following screenshots show that the ECS deployment is working successfully.
+
+### Application Load Balancer
+
+The Application Load Balancer is active, internet-facing, and forwards HTTP traffic on port 80 to the ECS target group.
+
+![Application Load Balancer Listener](images/alb-listener-target-group.png)
+
+### ECS Task Definition
+
+The ECS Task Definition revision is active and uses the EC2 launch type with bridge networking for the Nginx container.
+
+![ECS Task Definition Revision](images/ecs-task-definition-revision.png)
+
+### Running Application
+
+The application is successfully reachable through the public ALB DNS name.
+
+![ECS Application Deployment Successful](images/ecs-application-deployment-successful.png)
+
+---
+
 ## Project Goal
 
 The goal of this project is to deploy a containerized web application using a more production-like AWS architecture.
@@ -460,3 +484,4 @@ to:
 ```text
 Managed container orchestration with Amazon ECS on EC2
 ```
+
